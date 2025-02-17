@@ -1,5 +1,5 @@
 // Configuración de la API de OpenAI (OpenRouter)
-const API_KEY = "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";  // Reemplaza con tu clave real
+const API_KEY = "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";  // Reemplaza con tu clave real
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 // Función para enviar la consulta del usuario a OpenAI
 async function enviarMensaje() {
@@ -25,6 +25,7 @@ async function enviarMensaje() {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${API_KEY}`,
+                "HTTP-Referer": "http://localhost", 
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
